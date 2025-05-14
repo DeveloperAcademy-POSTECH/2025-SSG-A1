@@ -8,11 +8,12 @@ Obsidian을 활용하여 학습한 내용을 Markdown 노트로 기록하고, Gi
 <img width="1300" alt="image" src="https://github.com/user-attachments/assets/ee53a167-bd0a-4656-822b-a3548ac28a9d" />
 
 ### 👥 Team Member
-+ @luminouxx
-+ @luminouxx
-+ @luminouxx
-+ @luminouxx
-+ @luminouxx
++ [Cerin](https://github.com/CerinSeo)
++ [daniely](https://github.com/daniely7)
++ [Mary](https://github.com/Ellyhs)
++ [Paran](https://github.com/ifindary)
++ [Lucas](https://github.com/Ssunbell)
++ [Libby](https://github.com/ykbeeee)
 
 - 그룹장은 매주 돌아가며 변경될 수 있으며, 새로운 주차마다 학습 주제를 지정할 수 있습니다.
 - 팀원들은 PR을 통해 학습 내용을 공유하고, 서로의 노트를 리뷰하며 피드백을 제공할 수 있습니다.
