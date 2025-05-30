@@ -78,7 +78,7 @@ Function B 시작
 이때, "Function A 종료", "Function B 종료"는 출력되지 않습니다. 왜 그럴까요?
 
 - Task는 백그라운드에서 비동기적으로 실행되므로, 메인 함수 (main.swift or Playground 상단 등)가 종료되면 아직 실행 중인 Task도 중단될 수 있습니다.
-- `try? await Task.sleep(nanoseconds: 1_000_000_000)` 코드에서 대기하는 코드가 발생하고, 메인 스레드는 그대로 진행되고, 메인 [[2week_Lucas_20250530_thread]]가 먼저 종료가 되어버려서 functionB 종료, functionA 종료가 출력되기 전에 종료되어버립니다.
+- `try? await Task.sleep(nanoseconds: 1_000_000_000)` 코드에서 대기하는 코드가 발생하고, 메인 스레드는 그대로 진행되고, 메인 [[스레드(thread)]]가 먼저 종료가 되어버려서 functionB 종료, functionA 종료가 출력되기 전에 종료되어버립니다.
 
 ##### 동기 코드처럼 동작시키려면?
 아래 코드처럼 작성해주시면 됩니다.
