@@ -25,7 +25,7 @@
 - `Reducer` : 어떤 Action이 주어졌을 때 지금 State를 다음 상태로 변화시키는 방법을 가지고 있는 함수. 리듀서는 실행할수 있는 effect(api request)를 반환해야 하며, 보통은 effect 값을 반환
 - `Store` : 실제로 기능이 작동하는 공간. 사용자의 action을 보내서 store는 reducer와 effect를 실행할 수 있고, store에서 일어나는 state를 observe해서 UI를 업데이트 할 수 있음.
 
-![[Pasted image 20250530095615.png]]
+![[Pasted image 20250627173722.png]]
 - View영역
     - store
         - 뷰가 state를 읽고, 액션을 보낼 수 있게 해주는 핵심 객체
@@ -46,7 +46,7 @@
         - effect를 통해 비동기 작업을 실행할 수 있음.
 
 ## 2. 동작 흐름
-![[Pasted image 20250530095659.png]]
+![[Pasted image 20250627173735.png]]
 
 - 뷰 → 액션 → 리듀서 → 스테이트 → 뷰
 - 외부 의존성을 처리해야한다면 environment에서 의존성 처리하고 사이드이펙트를 action에 전달.
