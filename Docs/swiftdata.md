@@ -154,9 +154,9 @@ let config = ModelConfiguration(for: [Task.self], url: URL.documentsDirectory.ap
 ```
 ## Keywords
 
-- coredata
-- crud
-- foundation
+- [[coredata]]
+- [[crud]]
+- [[foundation]]
 
 ## References
 
