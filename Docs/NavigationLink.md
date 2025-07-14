@@ -1,10 +1,15 @@
+**References**
 https://developer.apple.com/documentation/swiftui/navigationlink#Control-a-presentation-link-programmatically
 
+**GQ: NavigationLink는 NavigationStack과 어떻게 다른가?** 
+
+**주요 기능**
 A view that controls a navigation presentation.
 - View 프로토콜을 따르는 하나의 UI 요소
 - 특정 UI 흐름이나 상태 변화를 제어하거나 유도함
 - navigation presentation은 다른 화면으로의 전환을 말함. 
 - NavigationStack 안에서 다른 뷰로 푸쉬됨. 
+**코드 예시**
 ![[Screenshot 2025-07-10 at 9.13.48 PM.png]]
 
 `struct NavigationLink<Label, Destination> where Label : View, Destination : View
@@ -19,6 +24,7 @@ A view that controls a navigation presentation.
 - 구조체를 라벨로 쓰고
 - 목적지를 하나의 SwiftUI View로 설정한 예
 
+**코드 예시**
 Link to a destination view - 예제를 따라해 보았다. 
 ![[Screenshot 2025-07-10 at 9.41.39 PM.png]]![[
 - 목적지 View를 직접 정의
@@ -37,7 +43,7 @@ Link to a destination view - 예제를 따라해 보았다.
 
 
 
-
+**Keywords**
 **상태 기반 네비게이션**
 - 사용자가 직접 NavigationLink를 누르지 않아도 상태 값이 바뀌면 자동으로 화면으로 이동하는 구조
 - 화면 전환을 코드로 직접 제어하려면, NavigationStack의 경로를 나타내는 state 변수를 만들어서 그 배열에 값을 추가하거나 제거함으로써 화면 이동을 프로그래밍적으로 실행할 수 있다. 
