@@ -1,9 +1,12 @@
 
-# The Composable Architecture
+## Description
 
+- The Composable Architecture
 - 구성 테스트 및 인체 공학을 염두에 두고 일관되고 이해하기 쉬운 방식으로 애플리케이션을 구축하기 위한 라이브러리.
 
-## 특징
+## 주요기능
+
+### 특징
 - **상태 관리(State management)** 단순한 값 타입을 사용하여 개발하는 애플리케이션의 상태를 관리하거나 많은 화면 간의 상태를 공유하는 방법을 제공한다. 이는 특정 화면의 변화를 다른 화면에서 즉시 관찰할 수 있도록 도와준다.  
     
 - **구성 (Composition)** 큰 기능들을 작은 컴포넌트로 분해할 수 있도록 해준다.  
@@ -17,7 +20,7 @@
 - **인체공학(Ergonomics)** 가능한 적은 수의 개념과 동작 파트만을 가진 단순한 API만으로 모든것을 수행할 수 있다.
 ---
 
-## 1. 도메인 구성 타입 정의
+### 1. 도메인 구성 타입 정의
 
 - `State` : 비즈니스 로직을 수행하거나 UI를 그릴 때 필요한 데이터에 대한 설명을 나타내는 타입
 - `Action` : 사용자가 하는 행동이나 노티피케이션 등 어플리케이션에 생길 수 있는 모든 행동을 나타내는 타입
@@ -45,15 +48,24 @@
         - reducer 내부에서 외부와 상호작용할 때 필요
         - effect를 통해 비동기 작업을 실행할 수 있음.
 
-## 2. 동작 흐름
+### 2. 동작 흐름
 ![[Pasted image 20250627173735.png]]
 
 - 뷰 → 액션 → 리듀서 → 스테이트 → 뷰
 - 외부 의존성을 처리해야한다면 environment에서 의존성 처리하고 사이드이펙트를 action에 전달.
 
 ---
+## TCA의 장점
 
-## 예제 코드
+- 상태흐름이 예측 가능하고 추적 가능
+	- 모든 상태 변화가 Reducer 안에서만 일어남 → 디버깅, 리플레이, 로깅이 쉬움
+- 기능 분리와 확장이 쉬움
+	- Feature마다 State, Action, Reducer, View를 나눌 수 있어 **큰 앱에서도 구조가 깔끔**
+- 의존성 관리가 깔끔함
+	- Environment로 외부 API, 시간, 파일 등 의존성을 주입해서 **테스트 가능하고 느슨한 결합 유지**
+
+
+## 코드예시
 
 ### store
 
@@ -151,19 +163,14 @@ struct Feature: Reducer {
 
 ```
 
------------
-## TCA의 장점
-
-- 상태흐름이 예측 가능하고 추적 가능
-	- 모든 상태 변화가 Reducer 안에서만 일어남 → 디버깅, 리플레이, 로깅이 쉬움
-- 기능 분리와 확장이 쉬움
-	- Feature마다 State, Action, Reducer, View를 나눌 수 있어 **큰 앱에서도 구조가 깔끔**
-- 의존성 관리가 깔끔함
-	- Environment로 외부 API, 시간, 파일 등 의존성을 주입해서 **테스트 가능하고 느슨한 결합 유지**
 
 ----------
+## Keywords
 
-참조.
+- [[MVVM]]
+
+
+## Reference
 [https://gist.github.com/pilgwon/ea05e2207ab68bdd1f49dff97b293b17](https://gist.github.com/pilgwon/ea05e2207ab68bdd1f49dff97b293b17)
 
 [](https://www.youtube.com/results?search_query=tca+%EC%95%84%ED%82%A4%ED%85%8D%EC%B2%98)[https://www.youtube.com/results?search_query=tca+아키텍처](https://www.youtube.com/results?search_query=tca+%EC%95%84%ED%82%A4%ED%85%8D%EC%B2%98)
@@ -171,6 +178,3 @@ struct Feature: Reducer {
 https://medium.com/@dmitrylupich/the-composable-architecture-swift-guide-to-tca-c3bf9b2e86ef
 
 https://velog.io/@soc06212/SwiftUI-%EB%A7%88%EC%9D%8C%EC%9C%BC%EB%A1%9C-%EC%9D%B4%ED%95%B4%ED%95%98%EB%8A%94-TCA
-
-----
-더알아보고 싶은 내용
