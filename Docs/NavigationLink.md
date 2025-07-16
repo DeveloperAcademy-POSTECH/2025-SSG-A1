@@ -66,9 +66,8 @@ path.append(.pink)
 #### Coordinate with a List
 - NavigationSplitView, List, NavigationLink, @State 간의 상태 동기화를 다룬다
 ![[Screenshot 2025-07-11 at 12.35.27 AM.png]]
-![[Screenshot 2025-07-11 at 12.35.27 AM.png]]
-
-//아이패드에서는 Detail view가 같이 보임
+![[Screenshot 2025-07-11 at 12.35.27 AM.png]![[Screenshot 2025-07-11 at 12.46.44 AM.png]]
+//아이패드에서는 Detail view가 같이 보임![[Screenshot 2025-07-11 at 12.46.44 AM.png]]
 - 사용자가 List에서 항목을 고르면 selection이 자동으로 업데이트된다. 
 - NavigationSplitView
 	- 좌측- List, 우측- Detail View 구성
