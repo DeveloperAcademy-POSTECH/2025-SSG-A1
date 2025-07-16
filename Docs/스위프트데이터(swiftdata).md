@@ -12,7 +12,7 @@
 - @Model
 	- SwiftData에서 관리할 **데이터 구조를 정의**할 때 사용
 	- 클래스를 @Model로 선언하면 자동으로 저장 가능한 객체로 변환됨
-	```
+	```swift
 	@Model 
 		class TrainingRecord { 
 			var failureText: String 
@@ -24,7 +24,7 @@
 	- 우리가 만든 데이터(예: 할 일 목록, 사용자 정보 등)를 영구 저장하는 곳.
 		- document 디렉토리에 default.sqlite라는 파일로 자동 저장된다.
 		- 저장소의 위치와 이름도 설정할 수 있다.
-```
+```swift
 	- @main
 		struct MyApp: App {
 		    var body: some Scene {
@@ -43,7 +43,7 @@ let config = ModelConfiguration(for: [Task.self], url: URL.documentsDirectory.ap
 	- 실제 데이터를 **삽입, 삭제, 수정, 저장**하는 주체
 	- SwiftUI 뷰에서는 @Environment(\.modelContext)로 쉽게 접근 가능
 	- 자동으로 변경 사항을 추적하며, 실행 취소 등도 지원
-	```
+	```swift
 	struct TrainingListView: View { 
 		@Environment(\.modelContext) private var modelContext 
 		... 
@@ -56,7 +56,7 @@ let config = ModelConfiguration(for: [Task.self], url: URL.documentsDirectory.ap
 	- 저장된 데이터 (Model)을 (필터링/정렬/조건 등을 활용해서) **가져오는데(read) 사용하는 속성래퍼
 	- 조건이 간단할 때 사용한다.
 	- 데이터 저장소와 뷰가 자동으로 동기화
-	```
+	```swift
 	struct TaskListView: View {
     @Query(filter: #Predicate<Task> { !$0.isDone }) var tasks: [Task]
 
@@ -70,7 +70,7 @@ let config = ModelConfiguration(for: [Task.self], url: URL.documentsDirectory.ap
 
 ## 코드 예시
 
-```
+```swift
 **struct** ContentView: View {
 
     //crud를 수행
@@ -129,7 +129,7 @@ let config = ModelConfiguration(for: [Task.self], url: URL.documentsDirectory.ap
 ```
 
 
-```
+```swift
 @Model
 **class** DataItem: Identifiable {
     **var** id: String
@@ -141,7 +141,7 @@ let config = ModelConfiguration(for: [Task.self], url: URL.documentsDirectory.ap
 }
 ```
 
-```
+```swift
 **@main**
 **struct** swiftdataexampleApp: App {
     **var** body: **some** Scene {
@@ -154,9 +154,9 @@ let config = ModelConfiguration(for: [Task.self], url: URL.documentsDirectory.ap
 ```
 ## Keywords
 
-- [[coredata]]
+- [[코어데이터 (coredata)]]
 - [[crud]]
-- [[foundation]]
+- [[파운데이션 (foundation)]]
 
 ## References
 
