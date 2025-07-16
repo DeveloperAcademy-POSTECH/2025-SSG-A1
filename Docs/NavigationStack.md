@@ -71,7 +71,7 @@ NavigationStack은 화면 전환(뒤로가기, 앞으로 가기 등)으로 스�
 - false라면 스플래시이미지에 남아있음
 
 ## Keywords
-NavigationPath를 이용해서 화면 이동을 배열처럼 관리해보자
+[[NavigationPath]]를 이용해서 화면 이동을 배열처럼 관리해보자
 - 다양한 타입(String, Int, Struct 등)을 함께 사용 가능
 `let path = NavigationPath()`
 `path.append("Seoul")     // String`
