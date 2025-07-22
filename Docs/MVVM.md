@@ -60,10 +60,10 @@ n/a
 - SwiftUI는 **단방향 데이터 흐름**이 기본
 - @State, @Binding, @ObservedObject, @Published 등을 활용
 
-#### **[[Combine]] 활용**
+#### **[[Optional]] 활용**
 
 - [[@Published]], [[@ObservableObject]]로 View와 ViewModel 연결
-- [[비동기]] 처리 시 [[Combine]]의 [[Publisher]], [[sink]], [[map]], [[assign]] 등 사용
+- [[비동기]] 처리 시 [[Optional]]의 [[Publisher]], [[sink]], [[map]], [[assign]] 등 사용
 
 #### **의존성 주입**
 
